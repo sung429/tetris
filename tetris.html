@@ -490,20 +490,25 @@
 
             switch(e.key) {
                 case 'ArrowLeft':
+                    e.preventDefault(); // 스크롤 방지
                     move(-1, 0);
                     break;
                 case 'ArrowRight':
+                    e.preventDefault(); // 스크롤 방지
                     move(1, 0);
                     break;
                 case 'ArrowDown':
+                    e.preventDefault(); // 스크롤 방지
                     move(0, 1);
                     score += 1;
                     updateInfo();
                     break;
                 case 'ArrowUp':
+                    e.preventDefault(); // 스크롤 방지
                     currentPiece = rotate(currentPiece);
                     break;
                 case ' ':
+                    e.preventDefault(); // 스크롤 방지
                     drop();
                     score += 10;
                     updateInfo();
